@@ -1,0 +1,39 @@
+﻿<Window x:Class="diskplot.partplot"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Plot" Height="320.42" Width="555.353" Icon="ploticon.ico" ResizeMode="CanMinimize" Initialized="Window_Initialized">
+    <Grid>
+        <Grid x:Name="editadd" HorizontalAlignment="Left" Height="272" Margin="1,0,0,0" VerticalAlignment="Top" Width="549">
+            <Label x:Name="limitlbl" Content="Limit" HorizontalAlignment="Left" Margin="25,71,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="namelbl" Content="Name" HorizontalAlignment="Left" Margin="227,71,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="drivelbl" HorizontalAlignment="Left" Height="28" Margin="231,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" TextChanged="Drivelbl_TextChanged"/>
+            <Label x:Name="customlbl" Content="Custom Icon" HorizontalAlignment="Left" Margin="25,147,0,0" VerticalAlignment="Top"/>
+            <ComboBox x:Name="icon" HorizontalAlignment="Left" Margin="29,173,0,0" VerticalAlignment="Top" Width="240" SelectedIndex="0" SelectionChanged="Icon_SelectionChanged">
+            </ComboBox>
+            <Button x:Name="add" HorizontalAlignment="Left" Margin="29,211,0,0" VerticalAlignment="Top" Width="36" Style="{DynamicResource MaterialDesignToolButton}" Click="Add_Click">
+                <materialDesign:PackIcon Kind="Add" Width="24" Height="24"/>
+            </Button>
+            <Button x:Name="trash" HorizontalAlignment="Left" Margin="79,211,0,0" VerticalAlignment="Top" Width="36" Style="{DynamicResource MaterialDesignToolButton}" Visibility="Collapsed" Click="Trash_Click">
+                <materialDesign:PackIcon Kind="TrashOutline" Width="24" Height="24"/>
+            </Button>
+            <Image x:Name="imgicon" HorizontalAlignment="Left" Height="54" Margin="287,147,0,0" VerticalAlignment="Top" Width="54"/>
+            <Label x:Name="directorylbl" Content="Directory" HorizontalAlignment="Left" Margin="25,18,0,0" VerticalAlignment="Top" IsEnabled="False"/>
+            <TextBox x:Name="direcotrylbl" HorizontalAlignment="Left" Height="28" Margin="105,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" IsEnabled="False"/>
+            <TextBox x:Name="id" HorizontalAlignment="Left" Height="28" Margin="435,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="76" IsEnabled="False"/>
+            <TextBox x:Name="size" HorizontalAlignment="Left" Height="28" Margin="29,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="121" DataObject.Pasting="TextBoxPasting" Text="0" PreviewTextInput="Size_PreviewTextInput" TextChanged="Size_TextChanged" MouseEnter="Size_MouseEnter" MouseLeave="Size_MouseLeave" />
+            <ComboBox x:Name="sizetype" HorizontalAlignment="Left" Margin="155,98,0,0" VerticalAlignment="Top" Width="48" SelectedIndex="0" SelectionChanged="ComboBox_SelectionChanged">
+                <ComboBoxItem Content="MB"/>
+                <ComboBoxItem Content="GB"/>
+            </ComboBox>
+            <Grid x:Name="limitwindow" HorizontalAlignment="Left" Height="125" Margin="29,131,0,0" VerticalAlignment="Top" Width="174" Background="#CC000000" Visibility="Collapsed">
+                <TextBlock x:Name="limitinfo" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" Foreground="White" FontSize="11" Text="Add limit to your plot if you want to comparise the other plots, or to track size usage. You can still exceed the limit with files. Also you don't need to set a limit."/>
+            </Grid>
+
+        </Grid>
+
+        <Button x:Name="save" Content="SAVE" HorizontalAlignment="Left" Margin="415,231,0,0" VerticalAlignment="Top" Width="112" Height="40" Click="Button_Click_1" Style="{DynamicResource MaterialDesignFlatButton}"/>
+        <Button x:Name="cancel" Content="DELETE" HorizontalAlignment="Left" Margin="281,231,0,0" VerticalAlignment="Top" Width="112" Height="40" Style="{DynamicResource MaterialDesignFlatButton}" Foreground="#FFE82C2C" Click="Cancel_Click"/>
+
+    </Grid>
+</Window>

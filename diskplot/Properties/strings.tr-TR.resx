@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="about" xml:space="preserve">
+    <value>Hakkında</value>
+  </data>
+  <data name="ask_continue" xml:space="preserve">
+    <value>Devam etmek istiyor musunuz?</value>
+  </data>
+  <data name="cancel" xml:space="preserve">
+    <value>iptal</value>
+  </data>
+  <data name="close" xml:space="preserve">
+    <value>Kapat</value>
+  </data>
+  <data name="customicon" xml:space="preserve">
+    <value>İkon</value>
+  </data>
+  <data name="debuginfo" xml:space="preserve">
+    <value>Hata Ayıklamayı Aç</value>
+  </data>
+  <data name="delete" xml:space="preserve">
+    <value>sil</value>
+  </data>
+  <data name="delete_fresh" xml:space="preserve">
+    <value>Tüm arsalar, ayarlar ve diğerleri silinecek. Bu seçenek diskinizde herhangi bir klasörü veya dosyayı silmeyecek.</value>
+  </data>
+  <data name="delete_plot" xml:space="preserve">
+    <value>Bu arsanın içindeki tüm dosyalar KALICI OLARAK SİLİNECEKTİR. Bu işlemi geri alamazsınız.</value>
+  </data>
+  <data name="delete_plot_title" xml:space="preserve">
+    <value>Arsayı Sil</value>
+  </data>
+  <data name="delete_uninstall" xml:space="preserve">
+    <value>Tüm arsalar, ayarlar ve diğerleri silinecek. Bu DiskPlot'u kaldıracak, ancak dosyalarınız bundan etkilenmeyecektir. Klasörler, diskinizde kalmaya devam edecek.</value>
+  </data>
+  <data name="directory" xml:space="preserve">
+    <value>Dizin</value>
+  </data>
+  <data name="diskplot_current" xml:space="preserve">
+    <value>Mevcut Klasör</value>
+  </data>
+  <data name="diskplot_main" xml:space="preserve">
+    <value>Ana Klasör</value>
+  </data>
+  <data name="documents" xml:space="preserve">
+    <value>Belgeler</value>
+  </data>
+  <data name="error_cantdelete" xml:space="preserve">
+    <value>Bu ikon DiskPlot tarafından kullanılıyor ve silinemez.</value>
+  </data>
+  <data name="error_icon" xml:space="preserve">
+    <value>Bu ikon zaten simge kütüphanesine eklendi.</value>
+  </data>
+  <data name="error_launch" xml:space="preserve">
+    <value>DiskPlot klasöründe bir sorun var. Lütfen DiskPlot klasörünü silmediğinizden emin olun.</value>
+  </data>
+  <data name="error_launch_title" xml:space="preserve">
+    <value>Başlatma Hatası</value>
+  </data>
+  <data name="error_lost" xml:space="preserve">
+    <value>Bu arsa kayıp, arsa klasörü bu diskten taşınmış veya silinmiş olabilir. Lütfen klasörü arsanın aynı adıyla tekrar yerleştirin. Ya da bu arsayı tamamen silin.</value>
+  </data>
+  <data name="error_lost_title" xml:space="preserve">
+    <value>Bağlantısı Kesilmiş Arsa</value>
+  </data>
+  <data name="error_name" xml:space="preserve">
+    <value>Bir arsa adı gereklidir.</value>
+  </data>
+  <data name="error_same" xml:space="preserve">
+    <value>Arsa adı ve klasörü diğer arsalar ile aynı olamaz.</value>
+  </data>
+  <data name="error_system" xml:space="preserve">
+    <value>Bu arsa adı DiskPlot tarafından kullanılıyor.</value>
+  </data>
+  <data name="error_unexpected" xml:space="preserve">
+    <value>Beklenmeyen hata. Normalde, DiskPlot bilinen problemleri algılar, ancak DiskPlot nedense bu hatayı algılayamadı. Lütfen daha sonra tekrar deneyin. Hata ayrıntıları aşağıdan bulunabilir:</value>
+  </data>
+  <data name="fresh_reset" xml:space="preserve">
+    <value>Temiz Başlangıç</value>
+  </data>
+  <data name="icons" xml:space="preserve">
+    <value>İkonlar</value>
+  </data>
+  <data name="limit" xml:space="preserve">
+    <value>Limit</value>
+  </data>
+  <data name="limitinfo" xml:space="preserve">
+    <value>Diğer arsalar ile karşılaştırma yapmak için, ya da boyut kullanımını takip etmek için limit ekleyin. Limiti hala dosyalar ile aşabilirsiniz. Ayrıca bir limit eklemenize de gerek yoktur.</value>
+  </data>
+  <data name="lost" xml:space="preserve">
+    <value>Bu arsa kayboldu.</value>
+  </data>
+  <data name="lost_lbl" xml:space="preserve">
+    <value>kayıp</value>
+  </data>
+  <data name="name" xml:space="preserve">
+    <value>İsim</value>
+  </data>
+  <data name="open_lbl" xml:space="preserve">
+    <value>aç</value>
+  </data>
+  <data name="performance" xml:space="preserve">
+    <value>Performans Modu</value>
+  </data>
+  <data name="plot" xml:space="preserve">
+    <value>Arsa</value>
+  </data>
+  <data name="plots" xml:space="preserve">
+    <value>Arsalar</value>
+  </data>
+  <data name="refresh" xml:space="preserve">
+    <value>Yenile</value>
+  </data>
+  <data name="save" xml:space="preserve">
+    <value>kaydet</value>
+  </data>
+  <data name="settings" xml:space="preserve">
+    <value>Ayarlar</value>
+  </data>
+  <data name="uninstall" xml:space="preserve">
+    <value>DiskPlot'u Kaldır</value>
+  </data>
+  <data name="warning" xml:space="preserve">
+    <value>Uyarı</value>
+  </data>
+  <data name="warning_fresh" xml:space="preserve">
+    <value>Klasörler silinmeyeceğinden dolayı, şu an mevcut arsa isimlerini, yeni arsa oluştururken kullanamayacaksınız.</value>
+  </data>
+  <data name="warning_uninstall" xml:space="preserve">
+    <value>DiskPlot bu sürücüden kaldırılacaktır. Arsalarınız ve dosyalarınız diskinizde kalmaya devam edecek. Ancak arsalarınızı yönetmek için tekrar DiskPlot'u kurmanız gerekecek.</value>
+  </data>
+  <data name="website" xml:space="preserve">
+    <value>İnternet Sitesi</value>
+  </data>
+  <data name="welcome" xml:space="preserve">
+    <value>Dosyalarınızı organize edin.</value>
+  </data>
+  <data name="welcome1" xml:space="preserve">
+    <value>DiskPlot, diskinizde sanal arsalar açarak dosyalarınızı organize etmenizi sağlar. Arsalarınıza birer isim ve simge de atayabilirsiniz.</value>
+  </data>
+  <data name="welcome2" xml:space="preserve">
+    <value>İstediğiniz kadar arsa oluşturabilirsiniz. Ve arsalarınız donanımsal olmadığı için hızlıdır ve güvenlidir.</value>
+  </data>
+  <data name="welcome3" xml:space="preserve">
+    <value>Sizin diskiniz, sizin kurallarınız.</value>
+  </data>
+  <data name="welcome4" xml:space="preserve">
+    <value>Ödevleriniz, evraklarınız, fotoğraflarınız... beklediğinizden daha fazla alan kaplıyor olabilir. Arsalarınızın ne kadar alan kullandığını ölçmek için ise bir arsa boyutu belirtin. Bu sayede arsanızın alan kullanımını bir ilerleme çubuğu ile takip edin.</value>
+  </data>
+  <data name="yourdocuments" xml:space="preserve">
+    <value>Evraklarınız</value>
+  </data>
+  <data name="yourphotos" xml:space="preserve">
+    <value>Fotoğraflarınız</value>
+  </data>
+</root>
