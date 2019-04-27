@@ -1,22 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections;
+using System.Diagnostics;
+using System.Globalization;
+using System.IO;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.Collections;
-using System.IO;
-using System.Diagnostics;
-using System.Threading;
-using System.Globalization;
 
 namespace diskplot
 {
@@ -61,12 +53,12 @@ namespace diskplot
 
                 MaterialDesignThemes.Wpf.Card pr = new MaterialDesignThemes.Wpf.Card();
 
-                System.Windows.Controls.Grid par = new Grid();
-                System.Windows.Controls.Image img = new Image();
-                System.Windows.Controls.Label lbl = new Label();
-                System.Windows.Controls.Label full = new Label();
-                System.Windows.Controls.Button btn = new Button();
-                System.Windows.Controls.Button menu = new Button();
+                Grid par = new Grid();
+                Image img = new Image();
+                Label lbl = new Label();
+                Label full = new Label();
+                Button btn = new Button();
+                Button menu = new Button();
                 full.HorizontalAlignment = HorizontalAlignment.Left;
                 full.Margin = new Thickness(106, 65, 0, 0);
                 full.VerticalAlignment = VerticalAlignment.Top;
@@ -133,8 +125,10 @@ namespace diskplot
                 btn.Click += btn_Click;
 
                 par.Width = 327;
-                System.Windows.Controls.ProgressBar status = new ProgressBar();
-                status.Name = "status" + partnm;
+                System.Windows.Controls.ProgressBar status = new ProgressBar
+                {
+                    Name = "status" + partnm
+                };
                 Thickness progressmargin = new Thickness(109, 46, 0, 0);
                 status.Margin = progressmargin;
                 status.Height = 18;
@@ -152,7 +146,7 @@ namespace diskplot
                 status.Minimum = 0;
                 status.Foreground = Brushes.Indigo;
                 status.SetResourceReference(Control.StyleProperty, "");
-                
+
                 if (type == PlotType.ViewScreen)
                 {
                     if (!Directory.Exists(directory))
@@ -188,16 +182,20 @@ namespace diskplot
                 par.Children.Add(menu);
 
                 pr.Content = par;
-                System.Windows.Controls.Label l = new Label();
-                l.Content = "";
-                l.FontSize = 2;
+                Label l = new Label
+                {
+                    Content = "",
+                    FontSize = 2
+                };
                 if (isright)
                 {
                     cards.Children.Add(pr);
                     cards.Children.Add(l);
 
-                    System.Windows.Controls.Label ll = new Label();
-                    ll.Width = 400;
+                    System.Windows.Controls.Label ll = new Label
+                    {
+                        Width = 400
+                    };
                     cards.Children.Add(ll);
                 }
                 else
@@ -211,7 +209,7 @@ namespace diskplot
             }
             catch (Exception h)
             {
-                MessageBox.Show(Properties.strings.error_unexpected + "\n\n" + h.Message,"DiskPlot",MessageBoxButton.OK,MessageBoxImage.Error);
+                MessageBox.Show(Properties.strings.error_unexpected + "\n\n" + h.Message, "DiskPlot", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
         }
@@ -227,27 +225,27 @@ namespace diskplot
         {
             if (((Button)sender).Content.ToString() == Properties.strings.lost_lbl.ToUpper())
             {
-                MessageBox.Show(Properties.strings.error_lost,Properties.strings.error_lost_title,MessageBoxButton.OK,MessageBoxImage.Error);
+                MessageBox.Show(Properties.strings.error_lost, Properties.strings.error_lost_title, MessageBoxButton.OK, MessageBoxImage.Error);
             }
             else if (((Button)sender).Content.ToString() == Properties.strings.open_lbl.ToUpper())
             {
                 string code = ((Button)sender).Name.Replace("btn", "");
                 Process.Start(Properties.Settings.Default.core[Convert.ToInt32(code) - 1].ToString());
             }
-            
+
         }
 
         void img_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            
+
         }
 
         private void Window_Activated(object sender, EventArgs e)
         {
             if (Properties.Settings.Default.iscreated)
             {
-                    Plot(Properties.Settings.Default.name, Properties.Settings.Default.directory, Properties.Settings.Default.icon, Properties.Settings.Default.size, PlotType.Create);
-                
+                Plot(Properties.Settings.Default.name, Properties.Settings.Default.directory, Properties.Settings.Default.icon, Properties.Settings.Default.size, PlotType.Create);
+
                 Properties.Settings.Default.directory = "";
                 Properties.Settings.Default.name = "";
                 Properties.Settings.Default.size = 0;
@@ -277,7 +275,6 @@ namespace diskplot
             string diskplotfolder = directory + @"\DiskPlot";
             if (!Directory.Exists(diskplotfolder))
             {
-
                 Directory.CreateDirectory(diskplotfolder);
                 Directory.CreateDirectory(diskplotfolder + @"\IconsLibrary");
 
@@ -292,17 +289,19 @@ namespace diskplot
                 string[] lines = { "[.ShellClassInfo]", "IconFile=" + s, "IconIndex=0", "[ViewState]", "Mode=", "Vid=", "FolderType=Generic" };
                 File.WriteAllLines(diskplotfolder + @"\desktop.ini", lines);
                 File.SetAttributes(diskplotfolder + @"\desktop.ini", FileAttributes.Hidden | FileAttributes.System);*/
-                
+
                 Properties.Settings.Default.mainfolder = diskplotfolder;
                 Properties.Settings.Default.Save();
 
-                intro d = new intro();
-                d.ShowInTaskbar = false;
+                intro d = new intro
+                {
+                    ShowInTaskbar = false
+                };
                 d.ShowDialog();
             }
             else
             {
-                
+
             }
         }
 
@@ -360,10 +359,10 @@ namespace diskplot
             }
             else
             {
-                MessageBox.Show(Properties.strings.error_launch + "\n\n" + Properties.strings.diskplot_main + ":\n" + Properties.Settings.Default.mainfolder + "\n\n" + Properties.strings.diskplot_current + ":\n" + System.AppDomain.CurrentDomain.BaseDirectory,Properties.strings.error_launch_title);
+                MessageBox.Show(Properties.strings.error_launch + "\n\n" + Properties.strings.diskplot_main + ":\n" + Properties.Settings.Default.mainfolder + "\n\n" + Properties.strings.diskplot_current + ":\n" + System.AppDomain.CurrentDomain.BaseDirectory, Properties.strings.error_launch_title);
             }
 
-            
+
         }
 
         public void LoadPlots(PlotType type)
@@ -387,7 +386,7 @@ namespace diskplot
 
         static long GetDirectorySize(string p)
         {
-            string[] a = Directory.GetFiles(p, "*.*",SearchOption.AllDirectories);
+            string[] a = Directory.GetFiles(p, "*.*", SearchOption.AllDirectories);
             long b = 0;
             foreach (string name in a)
             {
@@ -404,16 +403,16 @@ namespace diskplot
 
         private void Addplot_Click(object sender, RoutedEventArgs e)
         {
-            partplot n = new partplot(partplot.DialogType.Create,0);
+            partplot n = new partplot(partplot.DialogType.Create, 0);
             n.ShowDialog();
         }
 
         private void MenuItem_Click_1(object sender, RoutedEventArgs e)
         {
-            if (MessageBox.Show(Properties.strings.delete_fresh + "\n\n" 
-                + Properties.strings.warning.ToUpper() + ":\n - " 
-                + Properties.strings.warning_fresh + "\n\n" 
-                + Properties.strings.ask_continue, Properties.strings.fresh_reset,MessageBoxButton.YesNo,MessageBoxImage.Warning) == MessageBoxResult.Yes)
+            if (MessageBox.Show(Properties.strings.delete_fresh + "\n\n"
+                + Properties.strings.warning.ToUpper() + ":\n - "
+                + Properties.strings.warning_fresh + "\n\n"
+                + Properties.strings.ask_continue, Properties.strings.fresh_reset, MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
             {
                 Properties.Settings.Default.performancemode = false;
                 Properties.Settings.Default.core = new ArrayList();
@@ -425,12 +424,7 @@ namespace diskplot
                 Properties.Settings.Default.Save();
                 this.Close();
             }
-            
-        }
 
-        private void MenuItem_Click_2(object sender, RoutedEventArgs e)
-        {
-            //LoadPlots(PlotType.Delete);
         }
 
         private void MenuItem_Click_4(object sender, RoutedEventArgs e)
@@ -470,7 +464,7 @@ namespace diskplot
                 Properties.Settings.Default.Save();
                 if (Directory.Exists(Properties.Settings.Default.mainfolder))
                 {
-                    Directory.Delete(Properties.Settings.Default.mainfolder,true);
+                    Directory.Delete(Properties.Settings.Default.mainfolder, true);
                 }
 
                 if (File.Exists(System.AppDomain.CurrentDomain.BaseDirectory + @"\unins000.exe"))
